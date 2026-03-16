@@ -37,3 +37,4 @@ npx shadcn@latest add pagination
 
 -- importaciones testing de tailwind
 npm install @heroicons/react @headlessui/react
+npm uninstall @heroicons/react @headlessui/react
