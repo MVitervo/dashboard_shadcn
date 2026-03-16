@@ -1,21 +1,29 @@
-# React + TypeScript + Vite + shadcn/ui
+1- ejecutar estos comandos
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+npx shadcn@latest add sidebar
+npc shadcn@latest add collapsible
+npx shadcn@latest add dropdown-menu
+npx shadcn@latest add avatar
+npx shadcn@latest add breadcrumb
 
-## Adding components
+2- En los archivos que salga este error:
 
-To add components to your app, run the following command:
+Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.eslint(react-refresh/only-export-components)
 
-```bash
-npx shadcn@latest add button
-```
+solo poner este comentario al principio del archivo:
 
-This will place the ui components in the `src/components` directory.
+/* eslint-disable react-refresh/only-export-components */
 
-## Using components
 
-To use the components in your app, import them as follows:
+3- cargar el componente que ya tiene el sidebar en este caso seria <Page /> en el componente App
 
-```tsx
-import { Button } from "@/components/ui/button"
-```
+4- Aparecera este error:
+
+Uncaught Error: `Tooltip` must be used within `TooltipProvider`
+
+lo que hay que hacer es:
+- ir al componente sidebar.tsx
+- ubicar la funcion SidebarMenuButton
+- en el return envolver los componentes de <Tooltip> con <TooltipProvider>
+- volver a la pagina y ya funcionara
+
