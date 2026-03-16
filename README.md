@@ -27,3 +27,13 @@ lo que hay que hacer es:
 - en el return envolver los componentes de <Tooltip> con <TooltipProvider>
 - volver a la pagina y ya funcionara
 
+------------------------------------
+
+paquetes para continuar con el desarrollo:
+
+npx shadcn@latest add table
+npx shadcn@latest add pagination
+
+
+-- importaciones testing de tailwind
+npm install @heroicons/react @headlessui/react
